@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pokedex</string>
+    <string name="pokem_ns">POKEMÓNS</string>
+    <string name="esqueci_a_senha">Esqueci a senha</string>
 </resources>

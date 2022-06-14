@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitInitializer {
 
-    val URL = "https://pokeapi.co/api/v2/pokemon/ditto" //exemplo de API, não sei se é o link certo
+    val URL = "https://run.mocky.io/v3/"
 
     val retrofit = Retrofit.Builder()
         .baseUrl(URL)
@@ -15,4 +15,16 @@ class RetrofitInitializer {
     fun getServicePokemon(): ServicePokemon{
         return retrofit.create((ServicePokemon::class.java))
     }
+    fun getServiceHome(): ServiceHome{
+        return retrofit.create((ServiceHome::class.java))
+    }
+
+    fun getServiceElements(): ServiceElements{
+        return retrofit.create((ServiceElements::class.java))
+    }
+
+    fun serviceAccount(): ServiceAccount {
+        return retrofit.create(ServiceAccount::class.java)
+    }
+
 }

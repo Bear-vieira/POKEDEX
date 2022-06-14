@@ -7,7 +7,7 @@ class Pokemon {
     var type: String = ""
     var element: String= ""
     var description: String=""
-    var ablitie1: String=""
-    var ablitie2: String=""
-    var foto: String=""
+    var ability1: String=""
+    var ability2: String=""
+    var photo: String=""
 }

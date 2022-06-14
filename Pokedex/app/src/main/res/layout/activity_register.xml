@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparente"
+            android:src="@drawable/back_icon" />
+        <TextView
+            android:id="@+id/crieSuaConta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Crie sua conta"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/cor_background">
+
+        <ImageView
+            android:id="@+id/bulbaImage"
+            android:layout_width="65dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/bulbasaur_image" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/bulbaImage"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_background"
+            android:hint="   E-mail"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/email"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:hint="   Senha"
+            android:inputType="textPassword"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/senha"
+            android:layout_marginHorizontal="90dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/button_background"
+            android:text="CADASTRAR"
+            android:textColor="@color/cor_background"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnFazerlogin"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="75dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_background2"
+        android:text="Fazer login"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
