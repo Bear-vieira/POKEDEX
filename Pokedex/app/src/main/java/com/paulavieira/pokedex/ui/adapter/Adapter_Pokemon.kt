@@ -33,7 +33,7 @@ class Adapter_Pokemon(var context: Context, var list: List<Pokemon>) : BaseAdapt
         id.text = list[p0].id
 
         var image = view.findViewById<ImageView>(R.id.foto)
-        image.load(list[p0].foto)
+        image.load(list[p0].photo)
 
         var description = view.findViewById<TextView>(R.id.description)
         description.text = list[p0].description
