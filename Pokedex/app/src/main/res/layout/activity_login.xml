@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.LoginActivity"
     android:background="@color/white">
 
     <RelativeLayout
@@ -79,17 +81,37 @@
             android:textColor="@color/cor_background"
             android:textSize="20sp" />
 
-    </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnEsqueceuSenha"
-        android:layout_width="match_parent"
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/btnCadastro"
+        android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="75dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_background2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="85dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/transparente"
+        android:text="@string/cadastra_se"
+        android:textColor="@color/cor_background"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/btnEsqueceuSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="85dp"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparente"
         android:text="@string/esqueci_a_senha"
-        android:textColor="@color/white" />
+        android:textColor="@color/cor_background"
+        android:textAllCaps="false" />
+
+
+
+
+
 
 </RelativeLayout>

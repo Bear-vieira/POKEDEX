@@ -39,7 +39,7 @@ class Adapter_Water (var context: Context, var list: List<Elements>) : BaseAdapt
         tag.text=list[p0].id
 
         var tipo = view.findViewById<TextView>(R.id.tipo)
-        tipo.text=list[p0].type1.type
+        tipo.text=list[p0].type
 
 
         return view

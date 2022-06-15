@@ -45,12 +45,12 @@ class FireActivity : AppCompatActivity() {
 
     fun showLista(list: List<Elements>) {
 
-        var lista1 = list.filter {
-            it.type1.type == "Fire"
+        var list1 = list.filter {
+            it.type == "Fire"
         }
 
-        var lista = findViewById<ListView>(R.id.listFire)
-        lista.adapter = Adapter_Fire(this, lista1)
+        var list = findViewById<ListView>(R.id.listFire)
+        list.adapter = Adapter_Fire(this, list1)
 
 
     }

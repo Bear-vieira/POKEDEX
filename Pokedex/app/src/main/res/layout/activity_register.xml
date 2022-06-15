@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.RegisterActivity"
     android:background="@color/white">
 
     <RelativeLayout
@@ -67,7 +69,7 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/btnCadastrar"
+            android:id="@+id/btnRegistro"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_below="@+id/senha"
@@ -80,15 +82,6 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnFazerlogin"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="75dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/button_background2"
-        android:text="Fazer login"
-        android:textColor="@color/white" />
+
 
 </RelativeLayout>

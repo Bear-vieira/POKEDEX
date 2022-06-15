@@ -130,7 +130,10 @@
                     android:id="@+id/habilidade1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="Blaze"
                     android:textColor="@color/white" />
             </RelativeLayout>

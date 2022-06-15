@@ -45,7 +45,7 @@ class Activity_grass : AppCompatActivity() {
 
     fun showLista(list: List<Elements>) {
         var list3 = list.filter {
-            it.type1.type  == "Grass"
+            it.type  == "Grass"
         }
         var lista = findViewById<ListView>(R.id.listGrass)
         lista.adapter = Adapter_Grass(this, list3)

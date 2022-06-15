@@ -47,7 +47,7 @@ class Activity_water: AppCompatActivity() {
     fun showLista(list: List<Elements>) {
 
         var list2 = list.filter {
-            it.type1.type  == "Water"
+            it.type  == "Water"
         }
         var lista = findViewById<ListView>(R.id.listWater)
         lista.adapter = Adapter_Water(this, list2)
