@@ -30,16 +30,17 @@ class Adapter_Home(var context: Context, var list: List<Home>) : BaseAdapter() {
 
 
         var image = view.findViewById<ImageView>(R.id.pokeImage)
-       image.load(list[p0].photo)
+        image.load(list[p0].photo)
 
         var nome = view.findViewById<TextView>(R.id.nome)
         nome.text = list[p0].name
 
         var tag = view.findViewById<TextView>(R.id.tag)
-       tag.text=list[p0].id
+        tag.text=list[p0].id
 
         var tipo = view.findViewById<TextView>(R.id.tipo)
-        tipo.text=list[p0].type
+        tipo.text=list[p0].type1.type
+
 
         return view
     }

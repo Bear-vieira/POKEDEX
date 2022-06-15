@@ -1,9 +1,9 @@
 package com.paulavieira.pokedex.models
 
 class Home {
-    var photo: String=""
-    var name: String = ""
+    var type1: Type = Type()
     var id: String = ""
-    var type: String = ""
+    var photo: String = ""
+    var name : String = ""
 
 }

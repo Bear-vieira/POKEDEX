@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.paulavieira.pokedex.R
 import com.paulavieira.pokedex.models.Account
@@ -22,7 +23,18 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             login()
         }
-
+        var btncadastro= findViewById<TextView>(R.id.btnCadastro)
+        btncadastro.setOnClickListener {
+            var intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        var btnEsqueceuSenha= findViewById<TextView>(R.id.btnEsqueceuSenha)
+        btnEsqueceuSenha.setOnClickListener {
+            var intent = Intent(this,SenhaActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun login() {

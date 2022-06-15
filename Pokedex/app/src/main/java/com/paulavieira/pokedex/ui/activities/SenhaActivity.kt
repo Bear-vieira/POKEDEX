@@ -12,25 +12,24 @@ import com.paulavieira.pokedex.services.RetrofitInitializer
 import retrofit2.Call
 import retrofit2.Response
 
-class RegisterActivity : AppCompatActivity() {
+class SenhaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_senha)
 
-        var btnRegister = findViewById<Button>(R.id.btnRegistro)
-        btnRegister.setOnClickListener {
-            registerClick()
+        var btnEsqueceuSenha = findViewById<Button>(R.id.btnEnviar)
+        btnEsqueceuSenha.setOnClickListener {
+           EnvioClick()
         }
     }
 
-     fun registerClick() {
+    fun EnvioClick() {
 
         var email = findViewById<EditText>(R.id.email)
-        var password = findViewById<EditText>(R.id.senha)
+
 
         var account = Account()
         account.email = email.text.toString()
-        account.password = password.text.toString()
 
         var s = RetrofitInitializer().serviceAccount()
         var call = s.create(account)
@@ -38,14 +37,13 @@ class RegisterActivity : AppCompatActivity() {
         call.enqueue(object : retrofit2.Callback<Account> {
             override fun onResponse(call: Call<Account>, response: Response<Account>) {
                 if (response.code() == 200) {
-
-                    Toast.makeText(this@RegisterActivity, "Conta criada com sucesso!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@SenhaActivity, "Nova senha enviada", Toast.LENGTH_LONG).show()
                     showLogin()
                 }
             }
 
             override fun onFailure(call: Call<Account>, t: Throwable) {
-                Toast.makeText(this@RegisterActivity, "Ops", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SenhaActivity, "Tente Novamente", Toast.LENGTH_LONG).show()
             }
         })
 

@@ -25,23 +25,20 @@ class Adapter_Grass(var context: Context, var list: List<Elements>) : BaseAdapte
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
+        var view = LayoutInflater.from(context).inflate(R.layout.activity_detalhe, null)
 
-        var view = LayoutInflater.from(context).inflate(R.layout.item_detalhe_grass, null)
-
-        var nome= view.findViewById<TextView>(R.id.nome)
-        nome.text = list[p0].name
-
-        var image = view.findViewById<ImageView>(R.id.imagem)
+        var image = view.findViewById<ImageView>(R.id.pokeImage)
         image.load(list[p0].photo)
 
+        var nome = view.findViewById<TextView>(R.id.nome)
+        nome.text = list[p0].name
+
+        var tag = view.findViewById<TextView>(R.id.tag)
+        tag.text=list[p0].id
+
         var tipo = view.findViewById<TextView>(R.id.tipo)
-        tipo.text = list[p0].type
+        tipo.text=list[p0].type1.type
 
-        var hab1 = view.findViewById<TextView>(R.id.habilidade1)
-        hab1.text = list[p0].ability1
-
-        var hab2 = view.findViewById<TextView>(R.id.habilidade2)
-        hab2.text = list[p0].ability2
 
         return view
     }

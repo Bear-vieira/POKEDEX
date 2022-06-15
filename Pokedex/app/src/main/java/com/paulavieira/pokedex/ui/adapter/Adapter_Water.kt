@@ -10,7 +10,7 @@ import android.widget.TextView
 import coil.load
 import com.paulavieira.pokedex.R
 import com.paulavieira.pokedex.models.Elements
-import com.paulavieira.pokedex.models.Home
+
 
 class Adapter_Water (var context: Context, var list: List<Elements>) : BaseAdapter() {
     override fun getCount(): Int {
@@ -26,23 +26,21 @@ class Adapter_Water (var context: Context, var list: List<Elements>) : BaseAdapt
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        var view = LayoutInflater.from(context).inflate(R.layout.item_detalhe_water, null)
 
+        var view = LayoutInflater.from(context).inflate(R.layout.activity_detalhe, null)
 
-        var nome= view.findViewById<TextView>(R.id.nome)
-        nome.text = list[p0].name
-
-        var image = view.findViewById<ImageView>(R.id.imagem)
+        var image = view.findViewById<ImageView>(R.id.pokeImage)
         image.load(list[p0].photo)
 
+        var nome = view.findViewById<TextView>(R.id.nome)
+        nome.text = list[p0].name
+
+        var tag = view.findViewById<TextView>(R.id.tag)
+        tag.text=list[p0].id
+
         var tipo = view.findViewById<TextView>(R.id.tipo)
-        tipo.text = list[p0].type
+        tipo.text=list[p0].type1.type
 
-        var hab1 = view.findViewById<TextView>(R.id.habilidade1)
-        hab1.text = list[p0].ability1
-
-        var hab2 = view.findViewById<TextView>(R.id.habilidade2)
-        hab2.text = list[p0].ability2
 
         return view
     }

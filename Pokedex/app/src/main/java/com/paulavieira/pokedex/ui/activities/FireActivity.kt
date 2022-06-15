@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import android.widget.Toast
 import com.paulavieira.pokedex.R
 import com.paulavieira.pokedex.models.Elements
 import com.paulavieira.pokedex.services.RetrofitInitializer
@@ -26,30 +27,32 @@ class FireActivity : AppCompatActivity() {
 
         call.enqueue(object : retrofit2.Callback<List<Elements>> {
 
-            override fun onResponse(call: Call<List<Elements>>, response: Response<List<Elements>>) {
-
-                if (response.code() == 200) {
-
-                    response.body()?.let {
-                        showLista(it)
-                    }
-
+            override fun onResponse(
+                call: Call<List<Elements>>,
+                response: Response<List<Elements>>
+            ) {
+                response.body()?.let {
+                    showLista(it)
                 }
-
             }
 
             override fun onFailure(call: Call<List<Elements>>, t: Throwable) {
-
+                Toast.makeText(this@FireActivity, "", Toast.LENGTH_LONG).show()
             }
         })
 
     }
 
     fun showLista(list: List<Elements>) {
+
+        var lista1 = list.filter {
+            it.type1.type == "Fire"
+        }
+
         var lista = findViewById<ListView>(R.id.listFire)
-        lista.adapter = Adapter_Fire(this, list)
-        var intent = Intent(this,FireActivity::class.java)
-        startActivity(intent)
+        lista.adapter = Adapter_Fire(this, lista1)
+
+
     }
 
 
